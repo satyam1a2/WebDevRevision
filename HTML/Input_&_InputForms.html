@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anything</title>
+</head>
+<body>
+    
+<form>
+    <!-- Form tag is used to create a form -->
+    <!-- The reset and submit buttons only work properly when they are inside a <form> -->
+        
+    <label for="name"> Name: </label> <!-- name used in "id" and "for" connects the label and input -->
+    <input id="name" type="text" placeholder="Name">
+
+    <br></br>
+
+    <label for="age"> Age: </label>
+    <input id="age" type="number" >
+
+    <br></br>
+
+    <label for="email"> Email: </label>
+    <input id="email" type="email" required>
+
+    <br></br>
+
+    <label for="password"> Password: </label>
+    <input id="password" type="password" >
+
+    <br></br>
+
+    <label for="fav"> Favorite Language: </label>
+
+    <select id="fav">
+        <option> Python </option>
+        <option selected>  Java </option> <!-- By deafult option -->
+        <option> Javascript </option>
+        <option> C++ </option>
+    </select>
+
+    <br></br>
+
+    <label for="gender"> Gender: </label>
+
+    <input type="radio" id="male" name="gender"> 
+    <label for="male"> Male </label>
+
+    <input type="radio" id="female" name="gender"> 
+    <label for="female"> Female </label>
+
+    <input type="radio" id="other" name="gender"> 
+    <label for="other"> Others </label>
+
+    <br></br>
+
+    <input type="submit">
+    <input type="reset">
+    
+
+</form>
+
+
+</body>
+</html>

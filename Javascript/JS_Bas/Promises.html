@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function task1(raw) {
+        let pr1 = new Promise((resolve, reject) => {
+            if (raw != undefined) {
+
+                setTimeout( ()=> { resolve("Task 1"); },2000); // Simulating a delay of 2 seconds
+            
+            } else {
+                reject("Task 1 not ready");
+            }
+        });
+        return pr1;
+    }
+
+    function task2(raw) {
+        let pr2 = new Promise((resolve, reject) => {
+            if (raw != undefined) {
+
+                setTimeout( ()=>{ resolve("Task 2"); },2000); // Simulating a delay of 2 seconds);
+
+            } else {
+                reject("Task 2 not ready");
+            }
+        });
+        return pr2;
+    }
+
+    function task3(raw) {
+        let pr3 = new Promise((resolve, reject) => {
+            if (raw != undefined) {
+
+                setTimeout( ()=> { resolve("Task 3"); },2000); // Simulating a delay of 2 seconds
+
+            } else {
+                reject("Task 3 not ready");
+            }
+        });
+        return pr3;
+    }
+
+    // console.log("Starting tasks...");
+
+
+    // task1("ta").then((res1) => {
+    //         console.log("Task1 is completed");
+    //         return task2(res1);     // res1 = "Task 1"(wriiten in resolve function of task1)
+    //     })                     
+    //     .
+
+    // this above code will return the task2 promise
+
+
+    // task1("ta").then((res1) => {
+    //         console.log("Task1 is completed");
+    //         return task2(res1);     // res1 = "Task 1"(wriiten in resolve function of task1)
+    //     })                     
+    //     .then((res2) => {       // res2
+    //         console.log("Task2 is completed");
+    //         return task3(res2);   // res2 = "Task 2"(wriiten in resolve function of task2)
+    //     })
+    //     .then((res3) => {
+    //         console.log("Task3 is completed");
+    //         console.log("All tasks completed successfully: ", res3);
+    //     }).catch((err) => {
+    //         console.log("An error occurred: ", error);
+    //     });
+
+    // console.log("End");
+
+
+    // async // await
+
+    // can be used to write asynchronous code in a more synchronous manner, making it easier to read and maintain.
+
+    async function abc(){
+
+        try{ 
+            console.log("Starting tasks...");
+
+            let ans1 = await task1("ta");
+            console.log(ans1);
+
+            let ans2 = await task2(ans1);
+            console.log(ans2);
+
+            let ans3 = await task3(ans2);
+            console.log(ans3);
+
+            console.log("All tasks completed successfully");
+
+        } catch (err) {
+            console.log(err);
+        }
+   
+    }
+    abc();
+
+</script>
+</html>

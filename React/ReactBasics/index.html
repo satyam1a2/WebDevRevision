@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <h1> I am h1 element </h1>
+    </div>
+
+    <!-- make below by react -->
+    <!-- <div id="root">
+        <div class="parent">
+            parent
+
+            <div class="child">
+                child
+                <h1> GrandChild1 </h1>
+            </div>
+            <div class="child">
+                child
+                <h1> GrandChild2 </h1>
+            </div>
+
+        </div>
+    </div> -->
+
+</body>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+
+    // console.log("Reactobj:", React);
+    // console.log("React_DOM_obj:", ReactDOM);
+
+    let reactEle = React.createElement("h1", {id: "h1tag"}, "This is react element"); // In {} we can pass attributes
+    //eg     let reactEle = React.createElement("h1", { id: "h1tag", className: "anything" }, "This is react element");
+    console.log( reactEle);
+
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(reactEle);
+
+    let reactEle1 = React.createElement("div", {className: "parent"}, "parent",
+                                                                React.createElement("div", {className: "child"}, "child",
+                                                                                     React.createElement("h1", null, "GrandChild1") 
+                                                                                    ),
+                                                                React.createElement("div", {className: "child"}, "child",
+                                                                                     React.createElement("h1", null, "GrandChild2")
+                                                         )
+            ); 
+    
+    let root1 = ReactDOM.createRoot(document.getElementById("root"));
+    root1.render(reactEle1);
+    
+</script>
+
+</html>

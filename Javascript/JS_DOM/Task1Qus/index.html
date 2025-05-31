@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        .utility{
+            height:10vh;
+            background-color: lightgray;
+            border: 2px solid black;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+
+        .shape{
+            height: 90vh;
+            border: 2px solid;
+            background-color: lightyellow;
+
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .circle{
+            height:100px;
+            width:100px;
+            border: 2px solid red;
+            background-color: lightblue;
+            border-radius: 50%;
+        }
+
+        .square{
+            height:100px;
+            width:100px;
+            border: 2px solid red;
+            background-color: lightgreen;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="utility">
+
+        <div class="input">
+            <input id="inputtag" type="number"> 
+            <button id="btn">Add</button>
+        </div>
+
+        <select id="dd">
+            <option value="circle"> circle </option>
+            <option value="square"> square </option>
+        </select>
+        Choose Color->
+        <input id="color" type="color">
+    </div>
+
+    <div class="shape" id="container"> 
+        <!-- <div class="circle"> </div>
+        <div class="square"> </div> -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

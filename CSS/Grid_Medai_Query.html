@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .parent{
+            height:100vh;
+            width: 100vw;
+            border: 2px solid black;
+            background-color: #F8C471;
+            display: grid; /* This is the key property to make it a grid container */
+            grid-template-rows: 1fr 1fr 1fr 1fr; /* Defines three equal rows */
+            grid-template-columns: 1fr 1fr 1fr; /* Defines three columns with the middle one twice as wide as the others */
+        }
+
+        .box{
+            background-color: #2471A3;
+            border: 10px solid;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        #id1{
+            grid-column: 1/4;
+        }
+
+        #id2{
+            grid-row: 2/4;
+        }
+
+        #id3{
+            grid-column: 2/4;
+        }
+
+        #id6{
+            grid-column: 1/4;
+        }
+
+        @media(orientation:portrait){
+
+            .parent{
+              height:100vh;
+              width: 100vw;
+              border: 2px solid black;
+              background-color: #F8C471;
+              display: flex; 
+                flex-direction: column; /* Change to column for portrait orientation */
+            }
+
+            .box{
+               background-color: #2471A3;
+               border: 10px solid;
+               width: 100%;
+               height: 16.6% ; /* 100/6 = 16.6% Fixed height for each box */
+
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 2em;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box" id="id1"> header </div>
+        <div class="box" id="id2"> sidebar </div>
+        <div class="box" id="id3"> Content-1 </div> 
+        <div class="box" id="id4"> Content-2 </div>
+        <div class="box" id="id5"> Content-3 </div>
+        <div class="box" id="id6"> footer </div>
+    </div>
+    
+</body>
+
+</html>
